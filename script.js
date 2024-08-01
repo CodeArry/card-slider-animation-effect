@@ -42,3 +42,13 @@ function updateMainBackground() {
     // to match the active slide
     mainContainer.style.background = activeSlide.style.background
 }
+
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+}, false);
+
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'a' || e.key === 'c')) {
+      e.preventDefault();
+  }
+}, false);
